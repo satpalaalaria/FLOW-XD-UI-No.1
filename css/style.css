@@ -568,6 +568,12 @@ body {
     font-size: 1.8rem;
     margin-left: -9.5%;
   }
+  .Following {
+    font-size: 1.8rem;
+  }
+  .Nearby {
+    font-size: 1.8rem;
+  }
   .multi {
     font-size: 1.8rem;
     width: 14rem;
