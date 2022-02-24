@@ -581,6 +581,24 @@ body {
   .ractangle {
     margin-left: 1rem;
   }
+  .main-img1,
+  .main-img2,
+  .main-img3,
+  .main-img4,
+  .main-img5,
+  .main-img6 {
+    height: 40rem;
+    width: 22.2rem;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6 {
+    width: 22.2rem;
+    height: 40rem;
+  }
 }
 /*for 383px*/
 @media (max-width: 23.93em) {
