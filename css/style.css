@@ -1,0 +1,962 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.2%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contanir {
+  height: 110rem;
+  width: 50rem;
+  background-color: #ffffff;
+  /* background-color: #01c93e; */
+  box-shadow: 0px 0px 0.2rem 0.2rem #00000029;
+  /* margin: 0 auto; */
+  /* overflow: hidden; */
+  /* overflow-y: hidden; */
+  overflow-x: hidden;
+  margin-bottom: 10px;
+}
+.header {
+  height: 6.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  flex-grow: 3;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  position: relative;
+  /* margin-bottom: 1.6rem; */
+}
+.bellicon {
+  height: 2.5rem;
+  width: 2.3rem;
+  position: relative;
+  right: 5%;
+}
+.coin-extrnl-part {
+  border: 1px solid #eaeaea;
+  background-color: #eaeaea;
+  border-radius: 3.6rem;
+  height: 3.5rem;
+  width: 9.3rem;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+}
+
+.coin-internal-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dollar {
+  height: 1.9rem;
+  width: 1.9rem;
+  margin-top: 0.3rem;
+}
+.doller-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  height: 2.7rem;
+  width: 2.8rem;
+  font-size: 1.9rem;
+  opacity: 80%;
+  color: #000000;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+}
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+      format("woff2");
+}
+.section {
+  position: relative;
+}
+.section::before {
+  content: " 20K ";
+  font-family: "Product Sans";
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.4rem;
+  display: block;
+  font-weight: 500;
+  border: 1px solid #ffffff;
+  position: absolute;
+  background-color: #01c93e;
+  top: -40%;
+  right: -8%;
+  height: 2rem;
+  width: 3.6rem;
+  border-radius: 1.1rem;
+}
+.wallet-icon {
+  width: 3.5rem;
+  height: 3.1rem;
+  margin-left: 20rem;
+}
+.hrader-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* background-color: #01c93e; */
+  position: relative;
+  /* margin-bottom: 50px; */
+}
+.Popular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  height: 3.1rem;
+  width: 7rem;
+  font-size: 2rem;
+  color: #000000;
+  margin-left: -8%;
+}
+.ractangle {
+  margin-left: 2rem;
+}
+.Following {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  height: 3.1rem;
+  width: 7rem;
+  font-size: 2rem;
+  color: #000000;
+  margin-left: -17%;
+}
+.Nearby {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  height: 3.1rem;
+  width: 7rem;
+  font-size: 2rem;
+  color: #000000;
+  margin-left: -15%;
+}
+/* .Multi-Guest {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  height: 3.1rem;
+  width: 13rem;
+  font-size: 2rem;
+  color: #000000;
+  margin-left: -20%;
+  padding-right: 30px;
+} */
+.multi {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #000000;
+  height: 3.1rem;
+  width: 15rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* padding: 1rem; */
+  /* margin-right: 2%; */
+}
+.search-box {
+  height: 6.1rem;
+  width: 45.7rem;
+  border: 1px solid #eaeaea;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.7rem;
+  border-radius: 1.3rem;
+  margin-left: 5%;
+  margin-top: 1.5rem;
+}
+.search {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #666666;
+  font-size: 2rem;
+  background-color: #eaeaea;
+  /* width: 90%; */
+
+  border: none;
+  outline: none;
+}
+.search-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #666666;
+}
+.all-img {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+  width: 100%;
+  height: 78rem;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  overflow-x: auto;
+}
+.all-img::-webkit-scrollbar {
+  width: 0;
+}
+.five-two {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #ffffff;
+  position: absolute;
+  top: 4%;
+  left: 13%;
+}
+.seven-eight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #ffffff;
+  position: absolute;
+  top: 4%;
+  left: 38%;
+}
+.Elizabeth {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10%;
+  left: 35%;
+}
+.watch-live {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #ffffff;
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+}
+.main-img1 {
+  background-image: url(/img/img1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40.3rem;
+  width: 24.5rem;
+  position: relative;
+}
+.main-img2 {
+  background-image: url(/img/img2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40.3rem;
+  width: 24.5rem;
+  position: relative;
+}
+.main-img3 {
+  background-image: url(/img/img3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40.3rem;
+  width: 24.5rem;
+  position: relative;
+}
+.main-img4 {
+  background-image: url(/img/img4.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40.3rem;
+  width: 24.5rem;
+  position: relative;
+}
+.main-img5 {
+  background-image: url(/img/img5.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40.3rem;
+  width: 24.5rem;
+  position: relative;
+}
+.main-img6 {
+  background-image: url(/img/img6.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40.3rem;
+  width: 24.5rem;
+  position: relative;
+}
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6 {
+  width: 24.8rem;
+  height: 40.3rem;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+.h-6 {
+  height: 1.8rem;
+  width: 1.8rem;
+  color: #ffffff;
+}
+.w-6 {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+}
+.doller-icon-photo {
+  height: 2.1rem;
+  width: 2.1rem;
+  position: absolute;
+  top: 4%;
+  left: 27%;
+}
+.img1a,
+.img2a,
+.img3a,
+.img4a,
+.img5a,
+.img6a {
+  height: 5rem;
+  width: 5rem;
+  border: 1.5pt solid #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+}
+.footer {
+  /* border-top: 2px solid #000000; */
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background-color: #ffffff;
+  margin-top: 20px;
+  z-index: 999;
+}
+.icons {
+  height: 7.5rem;
+  width: 94%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  margin-left: 3.2rem;
+  /* display: flex;
+  justify-content: space-between; */
+}
+.icon1 {
+  height: 3rem;
+  width: 4rem;
+}
+.icon2 {
+  height: 2.8rem;
+  width: 4rem;
+}
+.icon3 {
+  height: 2.9rem;
+  width: 3.5rem;
+}
+.icon4 {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+.icon5 {
+  color: #000;
+  height: 3.4rem;
+  width: 3.4rem;
+}
+.video-icon-possi {
+  position: relative;
+}
+.video-icon {
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  bottom: 100%;
+  left: 43%;
+  background-color: #ffffff;
+  /* border: 0.1px solid #00b3ff; */
+  border-radius: 50%;
+}
+
+/*********Media Query**********/
+
+/* For large Mobile,Tablet500px*/
+
+@media (max-width: 31.25em) {
+  html {
+    font-size: 62.2%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 110rem;
+    width: 50rem;
+  }
+  .header {
+    height: 6.5rem;
+    width: 100%;
+  }
+}
+/*For 485px*/
+@media (max-width: 30.31em) {
+  html {
+    font-size: 60%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 100%;
+    width: 100%;
+  }
+  .header {
+    height: 6.6rem;
+    width: 100%;
+  }
+  .search-box {
+    height: 6.1rem;
+    width: 95%;
+    margin-left: 3%;
+  }
+  .all-img {
+    column-gap: 0.9rem;
+    row-gap: 0.9rem;
+  }
+  .main-img1,
+  .main-img2,
+  .main-img3,
+  .main-img4,
+  .main-img5,
+  .main-img6 {
+    height: 40.2rem;
+    width: 100%;
+  }
+}
+/*for 450px*/
+@media (max-width: 28.43em) {
+  html {
+    font-size: 59%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 100%;
+    width: 100%;
+  }
+  .header {
+    height: 6.6rem;
+    width: 100%;
+  }
+  .all-img {
+    width: 100%;
+    height: 70rem;
+    column-gap: 0.5rem;
+    row-gap: 0.8rem;
+  }
+  .main-img1,
+  .main-img2,
+  .main-img3,
+  .main-img4,
+  .main-img5,
+  .main-img6 {
+    height: 40rem;
+    width: 100%;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6 {
+    width: 100%;
+    height: 40rem;
+  }
+}
+/*for 424px*/
+@media (max-width: 26.56em) {
+  html {
+    font-size: 58%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .coin-extrnl-part {
+    left: 60%;
+  }
+  .wallet-icon {
+    margin-left: 25rem;
+  }
+  .search {
+    width: 80%;
+  }
+  .all-img {
+    width: 100%;
+    height: 70rem;
+    column-gap: 1rem;
+  }
+  .watch-live {
+    font-size: 1.4rem;
+  }
+  .main-img1,
+  .main-img2,
+  .main-img3,
+  .main-img4,
+  .main-img5,
+  .main-img6 {
+    height: 40rem;
+    width: 22.5rem;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6 {
+    width: 22.5rem;
+    height: 40rem;
+  }
+}
+/*for 417px*/
+@media (max-width: 26.06em) {
+  html {
+    font-size: 57%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+}
+/*for 407px*/
+@media (max-width: 25.43em) {
+  html {
+    font-size: 56.5%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .Popular {
+    width: 5rem;
+    font-size: 1.8rem;
+    margin-left: -9.5%;
+  }
+  .multi {
+    font-size: 1.8rem;
+    width: 14rem;
+  }
+  .ractangle {
+    margin-left: 1rem;
+  }
+}
+/*for 383px*/
+@media (max-width: 23.93em) {
+  html {
+    font-size: 56.5%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .Popular {
+    width: 5rem;
+    font-size: 1.8rem;
+    margin-left: -9.5%;
+  }
+  .Following {
+    font-size: 1.8rem;
+  }
+  .Nearby {
+    font-size: 1.8rem;
+  }
+  .multi {
+    font-size: 1.8rem;
+    width: 14rem;
+  }
+}
+
+/*for 375px*/
+@media (max-width: 23.43em) {
+  html {
+    font-size: 56%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 100%;
+    width: 100%;
+  }
+  .bellicon {
+    height: 2.5rem;
+    width: 2.3rem;
+    margin-left: 1.5rem;
+  }
+  .Popular {
+    width: 5rem;
+    font-size: 1.8rem;
+    margin-left: -9.5%;
+  }
+  .ractangle {
+    margin-left: 1rem;
+    width: 50px;
+  }
+  .Following {
+    width: 5rem;
+    font-size: 1.8rem;
+    margin-left: -19%;
+  }
+  .Nearby {
+    width: 5rem;
+    font-size: 1.8rem;
+  }
+  .Multi-Guest {
+    /* width: 5rem; */
+    font-size: 1.8rem;
+    margin-left: 1rem;
+  }
+  .multi {
+    width: 15rem;
+    font-size: 1.8rem;
+  }
+  .all-img {
+    width: 100%;
+    height: 70rem;
+    column-gap: 0.5rem;
+    row-gap: 0.8rem;
+  }
+  .main-img1,
+  .main-img2,
+  .main-img3,
+  .main-img4,
+  .main-img5,
+  .main-img6 {
+    height: 37rem;
+    width: 20rem;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6 {
+    width: 20rem;
+    height: 37rem;
+  }
+  .five-two {
+    top: 6%;
+    margin-left: 2px;
+  }
+  .w-6 {
+    position: absolute;
+    top: 6%;
+    left: 4%;
+    margin-left: 1px;
+  }
+  .seven-eight {
+    top: 6%;
+    left: 40%;
+    margin-left: 5px;
+  }
+  .doller-icon-photo {
+    left: 28%;
+    top: 5%;
+    margin-left: 5px;
+  }
+  .Elizabeth {
+    font-size: 1.7rem;
+  }
+  .watch-live {
+    font-size: 1.2rem;
+  }
+  .img1a,
+  .img2a,
+  .img3a,
+  .img4a,
+  .img5a,
+  .img6a {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+/*for 360px*/
+@media (max-width: 22.75em) {
+  html {
+    font-size: 55%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 100%;
+    width: 100%;
+  }
+  .bellicon {
+    height: 2.5rem;
+    width: 2.3rem;
+    margin-left: 1.5rem;
+  }
+  .Popular {
+    width: 5rem;
+    font-size: 1.8rem;
+    margin-left: -9.5%;
+  }
+  .ractangle {
+    margin-left: 1rem;
+    width: 50px;
+  }
+  .Following {
+    width: 5rem;
+    font-size: 1.8rem;
+    margin-left: -19%;
+  }
+  .Nearby {
+    width: 5rem;
+    font-size: 1.8rem;
+  }
+  .Multi-Guest {
+    /* width: 5rem; */
+    font-size: 1.8rem;
+    margin-left: 1rem;
+  }
+  .multi {
+    width: 13rem;
+    font-size: 1.8rem;
+  }
+  .all-img {
+    width: 100%;
+    height: 70rem;
+    column-gap: 0.5rem;
+    row-gap: 0.8rem;
+  }
+  .main-img1,
+  .main-img2,
+  .main-img3,
+  .main-img4,
+  .main-img5,
+  .main-img6 {
+    height: 37rem;
+    width: 20rem;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6 {
+    width: 20rem;
+    height: 37rem;
+  }
+  .five-two {
+    top: 6%;
+    margin-left: 2px;
+  }
+  .w-6 {
+    position: absolute;
+    top: 6%;
+    left: 4%;
+    margin-left: 1px;
+  }
+  .seven-eight {
+    top: 6%;
+    left: 40%;
+    margin-left: 5px;
+  }
+  .doller-icon-photo {
+    left: 28%;
+    top: 5%;
+    margin-left: 5px;
+  }
+  .Elizabeth {
+    font-size: 1.7rem;
+  }
+  .watch-live {
+    font-size: 1.2rem;
+  }
+  .img1a,
+  .img2a,
+  .img3a,
+  .img4a,
+  .img5a,
+  .img6a {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+/*for 330px*/
+@media (max-width: 20.66em) {
+  html {
+    font-size: 53.5%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 100%;
+    width: 100%;
+  }
+}
+/*for 320px*/
+@media (max-width: 20em) {
+  html {
+    font-size: 53%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 100%;
+    width: 100%;
+  }
+  .bellicon {
+    height: 2.5rem;
+    width: 2.3rem;
+    margin-left: -1rem;
+    /* margin-left: 2rem; */
+  }
+  .coin-extrnl-part {
+    left: 50%;
+  }
+  .wallet-icon {
+    width: 3.5rem;
+    height: 3.1rem;
+    margin-left: 15rem;
+  }
+  .Popular {
+    width: 5rem;
+    font-size: 1.7rem;
+    /* margin-left: -9.5%; */
+  }
+  .ractangle {
+    margin-left: 1rem;
+    width: 10;
+  }
+  .Following {
+    width: 5rem;
+    font-size: 1.7rem;
+    /* margin-left: -19%; */
+  }
+  .Nearby {
+    width: 5rem;
+    font-size: 1.7rem;
+  }
+  .Multi-Guest {
+    /* width: 5rem; */
+    font-size: 1.7rem;
+    /* margin-left: 5rem; */
+    /* padding-left: 20rem; */
+    margin-right: 0rem;
+  }
+  .multi {
+    width: 13rem;
+    font-size: 1.7rem;
+  }
+  .all-img {
+    width: 100%;
+    height: 70rem;
+    column-gap: 0.5rem;
+    row-gap: 0.8rem;
+  }
+  .main-img1,
+  .main-img2,
+  .main-img3,
+  .main-img4,
+  .main-img5,
+  .main-img6 {
+    height: 35rem;
+    width: 18rem;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6 {
+    width: 18rem;
+    height: 35rem;
+  }
+  .five-two {
+    top: 6%;
+    margin-left: 2px;
+  }
+  .w-6 {
+    position: absolute;
+    top: 6%;
+    left: 4%;
+    margin-left: 1px;
+  }
+  .seven-eight {
+    top: 6%;
+    left: 40%;
+    margin-left: 5px;
+  }
+  .doller-icon-photo {
+    left: 28%;
+    top: 5%;
+    margin-left: 5px;
+  }
+  .Elizabeth {
+    font-size: 1.7rem;
+  }
+  .watch-live {
+    font-size: 1.1rem;
+  }
+  .img1a,
+  .img2a,
+  .img3a,
+  .img4a,
+  .img5a,
+  .img6a {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+}
+
+/*for 306px*/
+@media (max-width: 19.12em) {
+  html {
+    font-size: 52.5%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  .contanir {
+    height: 100%;
+    width: 100%;
+  }
+  .multi {
+    width: 12rem;
+  }
+}
